@@ -1,0 +1,27 @@
+/**:
+  ros__parameters:
+    frequency: 30.0
+    two_d_mode: true
+    publish_tf: true
+
+    # Frames
+    odom_frame: odom
+    base_link_frame: base_footprint
+    world_frame: odom
+
+    # Input sources
+    odom0: /odom
+    imu0: /imu/data
+    odom0_config: [true, true, false,  # X, Y, Z
+                   false, false, true, # Roll, Pitch, Yaw
+                   true, true, false,  # Vx, Vy, Vz
+                   false, false, true, # Vroll, Vpitch, Vyaw
+                   false, false, false] # Ax, Ay, Az
+    imu0_config: [false, false, false, # X, Y, Z
+                  true, true, true,    # Roll, Pitch, Yaw
+                  false, false, false, # Vx, Vy, Vz
+                  true, true, true,    # Vroll, Vpitch, Vyaw
+                  false, false, false] # Ax, Ay, Az
+
+    imu0_differential: false
+    imu0_remove_gravitational_acceleration: true
